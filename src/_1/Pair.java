@@ -1,3 +1,5 @@
+package _1;
+
 import java.util.Random;
 
 public class Pair<A, B> {
@@ -11,7 +13,7 @@ public class Pair<A, B> {
 
     @Override
     public String toString() {
-        return "Pair{" +
+        return "_1.Pair{" +
                 "first=" + first +
                 ", second=" + second +
                 '}';

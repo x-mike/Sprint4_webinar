@@ -1,3 +1,7 @@
+package _1;
+
+import _1.Pair;
+
 public class Triple<A, B, C> extends Pair<A, B> {
 
     public final C third;
@@ -9,7 +13,7 @@ public class Triple<A, B, C> extends Pair<A, B> {
 
     @Override
     public String toString() {
-        return "Triple{" +
+        return "_1.Triple{" +
                 "first=" + first +
                 ", second=" + second +
                 ", third=" + third +
@@ -21,7 +25,7 @@ public class Triple<A, B, C> extends Pair<A, B> {
 
 class CheckEncapsulationTriple {
     public static void main(String[] args) {
-//        Triple<Integer, Long, String> triple = new Triple<>(42, 27L, "check");
+//        _1.Triple<Integer, Long, String> triple = new _1.Triple<>(42, 27L, "check");
 //        triple.third = "check";
     }
 }
