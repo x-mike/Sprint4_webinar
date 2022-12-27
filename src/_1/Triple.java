@@ -26,6 +26,6 @@ public class Triple<A, B, C> extends Pair<A, B> {
 class CheckEncapsulationTriple {
     public static void main(String[] args) {
 //        _1.Triple<Integer, Long, String> triple = new _1.Triple<>(42, 27L, "check");
-//        triple.third = "check";
+//        triple.third = "recheck";
     }
 }

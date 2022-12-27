@@ -1,8 +1,5 @@
-import java.util.Iterator;
 
-public class LinkedList<T> implements Iterable<T> {
-
-    Node<T> head;
+public class LinkedList<T>{
 
     static class Node<T> {
 
@@ -16,47 +13,9 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
-    public void insert(T data) {
-        Node<T> newNode = new Node(data);
-        if (this.head == null) {
-            this.head = newNode;
-        } else {
-            Node<T> last = this.head;
-            while (last.next != null) {
-                last = last.next;
-            }
-            last.next = newNode;
-        }
-    }
-
-
-    @Override
-    public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            Node<T> current = head;
-            @Override
-            public boolean hasNext() {
-                return current != null;
-            }
-
-            @Override
-            public T next() {
-                Node<T> rememberCurrent = current;
-                current = current.next;
-                return rememberCurrent.data;
-            }
-        };
-    }
-
-    public static void main(String[] args) {
-        LinkedList<String> ll = new LinkedList<>();
-        ll.insert("Vasya");
-        ll.insert("Misha");
-        ll.insert("Ilya");
-        for (String s:
-             ll) {
-            System.out.println(s);
-
-        }
-    }
+    // домашнее задание
+    // 1. добавить метод public void insert(T data), который бы вставлял новый Node в конец списка
+    // 2. реализовать интерфейс Iterable<T> (class LinkedList<T> implements Iterable<T>)
+    // 3. Добавить методы removeFirst() и removeLast() которые удаляют первый и последний элемент соотвественно
+    // 4. Добавить метод insertByIndex(int index, T data), который бы заменял элемент на индексе index
 }

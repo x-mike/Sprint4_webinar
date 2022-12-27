@@ -14,9 +14,10 @@ class Contrvariance {
 
     }
 }
-
-class Animal {
+class ProtoAnimal {}
+class Animal extends ProtoAnimal {
     int foodChainPosition;
+    int color;
 }
 
 class FoodChainPositionComparator implements Comparator<Animal> {
@@ -28,10 +29,12 @@ class FoodChainPositionComparator implements Comparator<Animal> {
 
 class Dog extends Animal { }
 
+class Behemoth extends Animal {}
+
 class CheckAnimal {
     public static void main(String[] args) {
         Covariance covariance = new Covariance();
-        covariance.find(new CatCreator(), new Animal());
+        covariance.find(new CatCreator(), new Cat());
         List<Dog> dogs = new ArrayList<>();
         Comparator<Animal> comparator = new FoodChainPositionComparator();
         Contrvariance contrvariance = new Contrvariance();

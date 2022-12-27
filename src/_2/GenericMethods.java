@@ -15,6 +15,11 @@ public class GenericMethods {
         gm.printClassName(1.0F);
         gm.printClassName('c');
         gm.printClassName(gm);
+        Pair<Integer, String> p = createPair(42, "hi");
+    }
+
+    public static <A, B> Pair<A, B> createPair(A a, B b) {
+        return new Pair<>(a, b);
     }
 }
 

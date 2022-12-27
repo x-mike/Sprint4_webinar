@@ -1,8 +1,8 @@
 
 
-//public final class Algorithm {
-//    public static <T> T max(T x, T y) {
-//        return x > y ? x : y;
-//    }
-//}
+public final class Algorithm {
+    public static <T extends Comparable<T>> T max(T x, T y) {
+        return x.compareTo(y) > 0 ? x : y;
+    }
+}
 

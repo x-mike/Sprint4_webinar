@@ -12,6 +12,7 @@ class Manipulator<T extends Doer> {
     public void manipulate() { obj.doNow(); }
 }
 
+//generic is useless
 class Manipulator2 {
     private Doer obj;
     public Manipulator2(Doer x) { obj = x; }
@@ -21,6 +22,7 @@ class Manipulator2 {
 class Manipulator3<T extends Doer> {
     private T obj;
     public Manipulator3(T x) { obj = x; }
+    public void manipulate() { obj.doNow(); }
     public T get() { return obj; }
 }
 
@@ -30,6 +32,6 @@ class Assembler extends Doer {}
 class CheckDoer {
     public static void main(String[] args) {
         Manipulator3<Worker> m3 = new Manipulator3(new Worker());
-        Doer w = m3.get();
+        Worker w = m3.get();
     }
 }

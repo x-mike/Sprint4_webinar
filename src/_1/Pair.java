@@ -13,7 +13,7 @@ public class Pair<A, B> {
 
     @Override
     public String toString() {
-        return "_1.Pair{" +
+        return "Pair{" +
                 "first=" + first +
                 ", second=" + second +
                 '}';
